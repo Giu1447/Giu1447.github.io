@@ -1,0 +1,53 @@
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  header {
+    height: 150px;
+    background-color: rgb(192, 222, 39);
+    box-shadow: -4px 4px 19px 5px rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  header a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+  }
+
+  header a:hover {
+    color: rgba(255, 0, 0, 0.434);
+  }
+
+  header img {
+    width: auto;
+    height: 60%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #map {
+    height: 900px;
+    width: auto;
+    background-color: blue;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #map img {
+    width: 95%;
+    height: auto;
+  }
