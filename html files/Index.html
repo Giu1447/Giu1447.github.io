@@ -1,65 +1,75 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My little Zoo</title>
   <link rel="stylesheet" href="/css files/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 
 <body>
   <header>
-    <a href="Index.html"><img src="/img/zooLogo.png"></a>
-    <nav>    
-      <div class="dropdown">
-        <a>Unsere Tiere </a>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="Frosch.html">Pfeilgiftfrosch</a></li>
-            <li><a href="Fisch.html">Kugelfisch</a></li>
-            <li><a href="Seewespe.html">Seewespe</a></li>
-            <li><a href="Kobra.html">Kobra</a></li>
-            <li><a href="Rochen.html">Stachelrochen</a></li>
-          </ul>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo"><a href="#">Giu's Zoo</a></div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a>Unsere Tiere</a></li>
+          <li><a href="Eintritt.html">Eintritt und Öffnugszeiten</a></li>
+          <li><a href="Kontakt.html">Kontakt</a></li>
+          <li><a href="Zoonews.html">Zoonews</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class=" fas fa-bars"></i>
         </div>
       </div>
-          <a href="Eintritt.html">Eintritt und Öffnugszeiten</a>
-          <a href="Kontakt.html">Kontakt</a>
-          <a href="Zoonews.html">Zoonews</a>
-      </nav> 
-  </header>
-  
-  <section id="map">
-    <img src="/img/map.png">
-  </section>
+    </nav>
 
-  <section id="wegBeschreibung">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-       Corporis aperiam quas nisi nemo facere? Quam reprehenderit nemo maxime culpa, 
-       repellendus quas ratione ipsum? Qui, nam nihil ex harum aliquid aut.
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-       Corporis aperiam quas nisi nemo facere? Quam reprehenderit nemo maxime culpa, 
-       repellendus quas ratione ipsum?
-    </p>
-  </section>
+    <div class="banner"></div>
+    <div class="about">
+      <div class="content">
+        <div class="title">Willkommen zu offiziellen Seite vom Reich der Gifte auch gennant Giu's Zoo</div>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, omnis!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae facere dignissimos, 
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.
+          incidunt quod maiores nobis eum, perferendis deserunt delectus accusamus quisquam harum velit repellat nulla eos illum aliquid excepturi voluptatem.</p>
+      </div>
+    </div>
 
-  <hr>
+    <script>
+      const menu = document.querySelector(".menu");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=> {
+        menu.classList.add("active");
+      }
 
-  <section id="jobAngebot">
-    <img src="/img/crowd-2718833_960_720.jpg">
-  </section>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-     Corporis aperiam quas nisi nemo facere? Quam reprehenderit nemo maxime culpa, 
-     repellendus quas ratione ipsum? Qui, nam nihil ex harum aliquid aut.
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-     Corporis aperiam quas nisi nemo facere? Quam reprehenderit nemo maxime culpa, 
-     repellendus quas ratione ipsum?
-  </p>s
+      cancelBtn.onclick = ()=> {
+        menu.classList.remove("active");
+      }
+    </script>
+ 
 
   <footer>
   </footer>
 </body>
+
 </html>

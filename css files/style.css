@@ -1,177 +1,117 @@
-
-:root {
-  --active-brightness: 0.85;
-  --border-radius: 5px;
-  --box-shadow: 2px 2px 10px;
-  --color-accent: #118bee15;
-  --color-bg: #fff;
-  --color-bg-secondary: #e9e9e9;
-  --color-link: #118bee;
-  --color-secondary: #920de9;
-  --color-secondary-accent: #920de90b;
-  --color-shadow: #f4f4f4;
-  --color-table: #118bee;
-  --color-text: #000;
-  --color-text-secondary: #999;
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --hover-brightness: 1.2;
-  --justify-important: center;
-  --justify-normal: left;
-  --line-height: 1.5;
-  --width-card: 285px;
-  --width-card-medium: 460px;
-  --width-card-wide: 800px;
-  --width-content: 1080px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root[color-mode="user"] {
-      --color-accent: #0097fc4f;
-      --color-bg: #333;
-      --color-bg-secondary: #555;
-      --color-link: #0097fc;
-      --color-secondary: #e20de9;
-      --color-secondary-accent: #e20de94f;
-      --color-shadow: #bbbbbb20;
-      --color-table: #0097fc;
-      --color-text: #f7f7f7;
-      --color-text-secondary: #aaa;
-  }
-}
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: sans-serif, Arial, Helvetica;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-  
-  
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0px 30px;
+}
 
-  .dropdown a {
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 10px 0;
+  background: #1b1b1b;
+}
+
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.navbar .menu-list {
+  display: inline-flex;
+}
+
+.menu-list li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 25px;
+  transition: all 0.3 ease;
+}
+
+.menu-list li a:hover {
+  color: #b6b6b6;
+  cursor: pointer;
+}
+
+.banner {
+  height: 100vh;
+  background-image: url("/img/map.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.about {
+  padding: 40px 0;
+}
+
+.about .title {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.about p {
+  padding-top: 20px;
+  text-align: justify;  
+}
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+@media (max-width: 790px) {
+  .icon {
     display: block;
   }
-
-  header {
-    height: 150px;
-    width: 100%;
-    background-color: rgb(192, 222, 39);
-    box-shadow: -4px 4px 19px 5px rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
+  .navbar .menu-list {
+    position: fixed;
     top: 0;
-  }
-
-  nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: white;
-    position: relative;
-  }
-
-  nav a::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    transition: 0.3s;
-  }
-
-  nav a:hover::after {
+    left: 0%;
+    height: 100%;
     width: 100%;
-  }
-
-  header img {
-    width: auto;
-    height: 80%;
-    display: flex;
-    justify-content: flex-start;
-    cursor: pointer;
-  }
-
-  #map {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  #map img {
-    width: 50%;
-    height: auto;
-    box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.8);
-  }
-
-  #wegBeschreibung {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  #wegBeschreibung p {
-    width: 50%;
+    max-width: 400px;
+    background: #222;
+    display: block;
+    padding: 40px 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu-list.active {
+    left: 0%;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a {
     font-size: 20px;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none solid rgb(68, 68, 68);
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
   }
-
-  #jobAngebot {
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  #jobAngebot p {
-    width: 50%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none solid rgb(68, 68, 68);
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-  }
-
-  #jobAngebot img {
-    margin-top: 20px;
-    width: 50%;
-    height: auto;
-    box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.8);
-  }
-  
-  ul {
-      list-style: none;
-  }
+}
