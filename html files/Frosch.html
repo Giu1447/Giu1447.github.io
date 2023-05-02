@@ -1,13 +1,113 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="/css files/style.css">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My little Zoo</title>
+  <link rel="stylesheet" href="/css files/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="Index.html">Giu's Zoo</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <ul class="dropdown">
+          <li><a>Unsere Tiere</a>
+            <ul class="dropdown-content">
+              <li><a href="Fisch.html">Kugelfisch</a></li>
+              <li><a href="Seewespe.html">Seewespe</a></li>
+              <li><a href="Kobra.html">Kobra</a></li>
+              <li><a href="Rochen.html">Stachelrochen</a></li>
+            </ul>
+        </ul>
+
+        </li>
+        <li><a href="Eintritt.html">Eintritt und Öffnugszeiten</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="Zoonews.html">Zoonews</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class=" fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="about">
+    <div class="content">
+      <div class="title">Der Pfeilgiftfrosch</div>
+      <p>Im "Giu's Zoo" gibt es eine faszinierende Vielfalt an exotischen Tieren zu entdecken. 
+        Besucherinnen und Besucher haben hier die Möglichkeit, einige der gefährlichsten und gleichzeitig 
+        faszinierendsten Kreaturen unserer Erde hautnah zu erleben. Zu den Highlights des Zoos zählen der farbenfrohe 
+        Pfeilgiftfrosch, der Kugelfisch mit seinem einzigartigen Verteidigungsmechanismus, die tödliche Seewespe, 
+        die majestätische Kobra und der beeindruckende Stachelrochen. Jedes Tier hat seinen eigenen Lebensraum und 
+        seine eigene Geschichte, die es zu entdecken gilt. Ein Besuch im "Giu's Zoo" ist ein unvergessliches Erlebnis 
+        für alle, die sich für die Schönheit und Vielfalt der Tierwelt begeistern.</p>
+        <hr>
+
+        <div class="body1">
+          <div class="wrapper1">
+            <img src="/img/Pfeilgiftfrosch.2jpg.jpg" alt="Pfeilgiftfrosch">
+            <div class="text">
+              <p>Der Pfeilgiftfrosch ist ein kleiner Frosch, der in den Regenwäldern Mittel- und Südamerikas beheimatet ist. 
+                Die Färbung variiert je nach Art, aber sie sind oft sehr auffällig und leuchtend gefärbt. 
+                Der Pfeilgiftfrosch ist für seine Giftigkeit bekannt, da einige Arten ein Toxin produzieren, 
+                das zur Jagd oder zur Verteidigung verwendet wird. Sie sind meist fleischfressend und ernähren 
+                sich von Insekten und anderen Wirbellosen.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="body2">
+          <div class="wrapper2">
+            <img src="/img/Pfeilgiftfrosch.jpg" alt="Pfeilgiftfrosch">
+            <div class="text">
+              <p>Pfeilgiftfrosch <br>
+                Lateinischer Name: Dendrobatidae <br>
+                Lebensraum: Regenwälder in Zentral- und Südamerika <br>
+                Größe: 1,5 bis 6 cm <br>
+                Gewicht: ca. 2 bis 5 Gramm <br>
+                Ernährung: Insekten, Spinnen und andere wirbellose Tiere <br>
+                Besonderheiten: Pfeilgiftfrösche besitzen oft auffällige Farben, die sie vor Fressfeinden warnen sollen. 
+                Einige Arten produzieren außerdem hautgiftige Sekrete, die sie vor Feinden schützen.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = () => {
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = () => {
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+
+  <footer>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Impressum.html">Impressum</a>
+  </footer>
+</body>
+
 </html>

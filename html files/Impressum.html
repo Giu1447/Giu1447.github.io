@@ -1,13 +1,126 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="/css files/style.css">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My little Zoo</title>
+  <link rel="stylesheet" href="/css files/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">Giu's Zoo</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <ul class="dropdown">
+          <li><a>Unsere Tiere</a>
+            <ul class="dropdown-content">
+              <li><a href="Frosch.html">Pfeilgiftfrosch</a></li>
+              <li><a href="Fisch.html">Kugelfisch</a></li>
+              <li><a href="Seewespe.html">Seewespe</a></li>
+              <li><a href="Kobra.html">Kobra</a></li>
+              <li><a href="Rochen.html">Stachelrochen</a></li>
+            </ul>
+        </ul>
+
+        </li>
+        <li><a href="Eintritt.html">Eintritt und Öffnugszeiten</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="Zoonews.html">Zoonews</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class=" fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+      <div class="title">Willkommen im Reich der Gifte</div>
+      <p>folge der Straße für etwa fünf Minuten, bis du eine Bushaltestelle erreichst.
+        Nimm den Bus Nr. 27 und steige nach etwa 10 Minuten an der Haltestelle "Giu's Zoo" aus.</p>
+
+      <p>Wenn du lieber zu Fuß gehen möchtest, biege an der Bushaltestelle rechts ab
+        und folge dem Gehweg, der dich durch ein Wohngebiet führt. Nach etwa 15 Minuten erreichst du den Haupteingang
+        des Giu's Zoo.</p>
+
+      <hr>
+
+      <div class="teamBild">
+        <img src="/img/Team.png" alt="">
+      </div>
+      <div class="jobangebot">
+        <div class="title">Jobangebot für Interessierte:</div>
+
+        <p>Stellenbeschreibung: <br>
+          Wir suchen einen engagierten Tierpfleger (m/w/d), der unser Team im Zoo verstärkt. Als Tierpfleger sind Sie
+          verantwortlich
+          für die Pflege, Fütterung und Überwachung einer Vielzahl von Tieren, von kleinen Nagetieren bis hin zu großen
+          Raubtieren.
+        </p>
+
+        <p>Hauptaufgaben:</p>
+
+        <ul>
+          <li>Fütterung und Pflege der Tiere nach festgelegten Zeitplänen</li>
+          <li>Reinigung der Tiergehege und Überwachung der Tiergesundheit</li>
+          <li>Verabreichung von Medikamenten und Behandlung von Verletzungen</li>
+          <li>Teilnahme an Zuchtprogrammen und Fortpflanzungsaktivitäten</li>
+          <li>Interaktion mit Besuchern und Vermittlung von Wissen über die Tiere</li>
+          <li>Unterstützung anderer Tierpfleger bei Bedarf</li>
+        </ul>
+        
+      <p>Anforderungen: </p>
+        <ul>
+          <li>Abgeschlossene Ausbildung zum Tierpfleger oder vergleichbare Qualifikation</li>
+          <li>Erfahrung in der Arbeit mit Tieren in einem Zoo oder Tierheim</li>
+          <li>Kenntnisse in der Tiergesundheit und Tierpflege</li>
+          <li>Fähigkeit zur Arbeit in einem Team und zur Zusammenarbeit mit anderen Abteilungen im Zoo</li>
+          <li>Ausgeprägte Kommunikationsfähigkeiten und Freude am Umgang mit Besuchern</li>
+          <li>Flexibilität bei Arbeitszeiten, da die Arbeit an Wochenenden und Feiertagen sowie in Schichten erforderlich sein
+              kann
+          </li>
+          <li>Körperliche Fitness und Belastbarkeit</li>
+        </ul>
+
+        <p>Wir bieten Ihnen eine abwechslungsreiche und herausfordernde Arbeit in einem dynamischen Team, sowie die
+        Möglichkeit zur beruflichen Weiterentwicklung und Fortbildung. Wenn Sie Interesse an dieser Stelle haben und die
+        genannten Anforderungen erfüllen, senden Sie bitte Ihre Bewerbungsunterlagen an uns.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = () => {
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = () => {
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+
+  <footer>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Impressum.html">Impressum</a>
+  </footer>
+</body>
+
 </html>
