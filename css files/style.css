@@ -367,45 +367,11 @@ background: rgb(0,123,255,0.3);
   width: 100%;
 }
 
-.image-grid {
-	--gap: 16px;
-	--num-cols: 4;
-	--row-height: 300px;
-
-	box-sizing: border-box;
-	padding: var(--gap);
-
-	display: grid;
-	grid-template-columns: repeat(var(--num-cols), 1fr);
-	grid-auto-rows: var(--row-height);
-	gap: var(--gap);
-}
-
-.image-grid>img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.image-grid-col-2 {
-	grid-column: span 2;
-}
-
-.image-grid-row-2 {
-	grid-row: span 2;
-}
-
-@media screen and (max-width: 1024px) {
-	.image-grid {
-		--num-cols: 2;
-		--row-height: 200px;
-	}
-}
-
 .neueTiere {
   border: thin solid;
   padding: 0 20px 0 20px;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .kontakt {
@@ -471,4 +437,20 @@ textarea {
 
 .content a {
   color: black;
+}
+
+.bilder {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0 20px;
+}
+
+.bilder img {
+  width: 45%;
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
 }
