@@ -405,18 +405,6 @@ h3 {
   width: 100%;
 }
 
-.neu {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.text2 {
-  border: thin solid;
-  margin: 20px; 
-  padding: 0 15px 0 15px;
-}
-
 .content a {
   color: black;
 }
@@ -540,4 +528,28 @@ body {
   .kreis h2 {
     font-size: 10px;
   }
+  .dropdown:active .dropdown-content {
+    display: block;
+  }
+}
+@media (min-width: 1110px) {
+  .tiere2, .tiere1 {
+    width: 100%;
+    float: none;
+    width: 46%;
+  }
+} 
+
+.tiere1 {
+  float: left;
+  border: thin solid;
+  margin: 20px; 
+  padding: 15px;
+}
+
+.tiere2 {
+  float: right;
+  border: thin solid;
+  margin: 20px; 
+  padding: 15px;
 }
